@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#d63384" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon.png">
+  <title>For My Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #fff6fa);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1, h2 {
+      font-family: 'Great Vibes', cursive;
+      color: #d63384;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .love-letter, .hausa-love, .sensual-messages {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .gift-box {
+      font-size: 80px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gift-box:hover {
+      transform: scale(1.2);
+    }
+    .gift-message {
+      display: none;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #e83e8c;
+    }
+    .reasons-list {
+      margin-top: 30px;
+    }
+    .reason {
+      background: #fff;
+      margin: 10px auto;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      max-width: 400px;
+      display: none;
+    }
+    .btn {
+      padding: 10px 20px;
+      background: #d63384;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #ad2568;
+    }
+    .greeting {
+      font-size: 24px;
+      font-weight: bold;
+      color: #c2185b;
+    }
+    .heart {
+      position: fixed;
+      top: 100vh;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: #ff69b4;
+      transform: rotate(45deg);
+      animation: float 8s linear infinite;
+      opacity: 0.6;
+      z-index: 0;
+    }
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff69b4;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      top: 0;
+      left: -10px;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(45deg); }
+      100% { transform: translateY(-120vh) rotate(45deg); }
+    }
+  </style>
+</head>
+<body>
+  <audio id="bg-music" autoplay loop muted>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('Service Worker registered!', reg))
+          .catch(err => console.log('Service Worker registration failed!', err));
+      });
+    }
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    }
+    setInterval(createHeart, 600);
+
+    document.addEventListener('click', () => {
+      const music = document.getElementById('bg-music');
+      if (music && music.muted) {
+        music.muted = false;
+        music.play();
+      }
+    }, { once: true });
+  </script>
+
+  <div class="section">
+    <h1>💌 Love Letter</h1>
+    <div class="love-letter">
+      <p>My dearest love,</p>
+      <p>Every moment with you feels like a beautiful dream. Your smile brightens my soul, and your presence gives me peace. I made this space to remind you how deeply you are loved — today, tomorrow, and always.</p>
+      <p>Forever yours ❤️</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h1>🎁 Gift Box</h1>
+    <div onclick="showGift()" class="gift-box">🎁</div>
+    <div id="gift-message" class="gift-message">You are my most precious gift. I’d unwrap a thousand lifetimes just to find you again. 💖</div>
+  </div>
+
+  <div class="section">
+    <h1>💡 Reasons I Love You</h1>
+    <button class="btn" onclick="showNextReason()">Tell Me a Reason</button>
+    <div class="reasons-list">
+      <div class="reason">Your laughter feels like music to my heart.</div>
+      <div class="reason">You understand me without me saying a word.</div>
+      <div class="reason">Your strength, even in silence, inspires me.</div>
+      <div class="reason">You make every ordinary moment feel magical.</div>
+      <div class="reason">Because simply — you are you. And that’s perfect.</div>
+      <div class="reason">Even your silence speaks to my soul.</div>
+      <div class="reason">I want to wake up next to you every morning.</div>
+      <div class="reason">I want your lips to be the last thing I feel before sleep.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h1>🗣 Hausa Romantic & Sensual Messages</h1>
+    <div class="hausa-love">
+      <p>Na kalleki ne saboda ke kyau ce fiye da kowace magana da zan iya furtawa. Kallonki yana sa zuciyata ta natsu.</p>
+      <p>Idan murmushinki ne littafi, to ni zan so in zama marubucin da zai karanta shi daga bakin ki har cikin zuciyarki.</p>
+      <p>Da ace ina kusa dake yanzu, sai na rike hannunki na danne kalmomi a cikin numfashi.</p>
+    </div>
+    <div class="sensual-messages">
+      <p>Ina kwance ina tunaninki… yadda muryarki ke ratsawa cikin zuciyata kamar sanyi mai daɗi. Da ace zan iya ajiye kaina kusa dake yanzu, in lumshe ido ina jin dumin jikin ki da ƙamshin fatar ki.</p>
+      <p>Sticker ɗin ki ya taɓa zuciyata kamar kiss ɗin da zuciyata ke ɓoyewa miki. Da ace kina kusa, sai na rike ki har barci ya kwasheki a jikina.</p>
+      <p>Na ji kalamanki, amma soyayya ta ba ta samo tushe daga rashin kunya ba — ta fito daga zuciyar da ta kasa ɓoye gaskiya.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h1>🌙 Good Night / ☀️ Good Morning</h1>
+    <div class="greeting" id="greeting"></div>
+  </div>
+
+  <button id="installBtn" class="btn" style="display:none; margin-bottom: 20px;">📲 Install This App</button>
+  <button class="btn" onclick="downloadApp()">📦 Download App</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+  <script>
+    function showGift() {
+      document.getElementById('gift-message').style.display = 'block';
+    }
+
+    let currentReason = 0;
+    function showNextReason() {
+      const reasons = document.querySelectorAll('.reason');
+      if (currentReason < reasons.length) {
+        reasons[currentReason].style.display = 'block';
+        currentReason++;
+      } else {
+        alert("That's all for now, but I have many more reasons inside my heart.");
+      }
+    }
+
+    function setGreeting() {
+      const hour = new Date().getHours();
+      const greeting = document.getElementById('greeting');
+      if (hour < 12) {
+        greeting.innerText = 'Good morning, beautiful. I hope your day is as lovely as your soul.';
+      } else if (hour < 18) {
+        greeting.innerText = 'Good afternoon, my sunshine. I’m thinking of you.';
+      } else {
+        greeting.innerText = 'Good night, my love. May your dreams be wrapped in my arms.';
+      }
+    }
+
+    setGreeting();
+
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = 'inline-block';
+    });
+
+    installBtn.addEventListener('click', () => {
+      installBtn.style.display = 'none';
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(choiceResult => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('App installed');
+          } else {
+            console.log('App dismissed');
+          }
+          deferredPrompt = null;
+        });
+      }
+    });
+
+    async function downloadApp() {
+      const zip = new JSZip();
+
+      zip.file("index.html", document.documentElement.outerHTML);
+
+      const manifest = {
+        name: "For My Love",
+        short_name: "LoveApp",
+        start_url: "index.html",
+        display: "standalone",
+        background_color: "#ffe6f0",
+        theme_color: "#d63384",
+        description: "A romantic web app for someone special 💖",
+        icons: [
+          {
+            src: "icon.png",
+            sizes: "192x192",
+            type: "image/png"
+          },
+          {
+            src: "icon.png",
+            sizes: "512x512",
+            type: "image/png"
+          }
+        ]
+      };
+      zip.file("manifest.json", JSON.stringify(manifest, null, 2));
+
+      zip.file("service-worker.js", `
+self.addEventListener('install', event => {
+  console.log('Service Worker installing.');
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', event => {
+  console.log('Service Worker activating.');
+});
+
+self.addEventListener('fetch', event => {
+  // This is a no-op fetch to allow basic PWA functionality
+});
+      `);
+
+      const iconBlob = await fetch("icon.png").then(res => res.blob());
+      zip.file("icon.png", iconBlob);
+
+      zip.generateAsync({ type: "blob" }).then(content => {
+        saveAs(content, "for-my-love.zip");
+      });
+    }
+  </script>
+</body>
+</html>
