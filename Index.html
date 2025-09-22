@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#d63384" />
+  <title>For My Dearest Raihana 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #fff6fa, #ffe6f0);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Great Vibes', cursive;
+      color: #d63384;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin: 20px 0;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      background: linear-gradient(to right, #ff69b4, #d63384);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    
+    .header-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .section {
+      padding: 60px 20px;
+      margin: 30px 0;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, #ff69b4, #d63384);
+    }
+    
+    .love-letter {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      text-align: left;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .love-letter p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .love-letter p:first-of-type::first-letter {
+      font-size: 2.5rem;
+      color: #d63384;
+      font-family: 'Great Vibes', cursive;
+    }
+    
+    .gift-box {
+      font-size: 100px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      display: inline-block;
+      margin: 20px 0;
+      text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .gift-box:hover {
+      transform: scale(1.2) rotate(10deg);
+    }
+    
+    .gift-message {
+      display: none;
+      margin: 30px auto;
+      font-size: 24px;
+      color: #e83e8c;
+      max-width: 600px;
+      padding: 20px;
+      background: #fff6fa;
+      border-radius: 15px;
+      border: 2px dashed #ff69b4;
+    }
+    
+    .reasons-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .reason-card {
+      background: white;
+      width: 280px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .reason-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .reason-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #ff69b4;
+    }
+    
+    .reason-text {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    
+    .btn {
+      padding: 15px 30px;
+      background: linear-gradient(to right, #ff69b4, #d63384);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      background: linear-gradient(to right, #ff4da6, #c2185b);
+    }
+    
+    .greeting {
+      font-size: 28px;
+      font-weight: bold;
+      color: #c2185b;
+      margin: 20px 0;
+      padding: 20px;
+      background: #fff6fa;
+      border-radius: 15px;
+      display: inline-block;
+    }
+    
+    .heart {
+      position: fixed;
+      top: 100vh;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: #ff69b4;
+      transform: rotate(45deg);
+      animation: float 8s linear infinite;
+      opacity: 0.6;
+      z-index: 0;
+    }
+    
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff69b4;
+      border-radius: 50%;
+    }
+    
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    
+    .heart::after {
+      top: 0;
+      left: -10px;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0) rotate(45deg); opacity: 0.6; }
+      100% { transform: translateY(-120vh) rotate(45deg); opacity: 0; }
+    }
+    
+    .floating-hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .floating-heart {
+      position: absolute;
+      font-size: 24px;
+      opacity: 0;
+      animation: floatUp 5s linear infinite;
+      color: #ff69b4;
+    }
+    
+    @keyframes floatUp {
+      0% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(0deg);
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100px) rotate(360deg);
+      }
+    }
+    
+    .progress-bar {
+      height: 5px;
+      width: 0%;
+      background: linear-gradient(to right, #ff4d94, #ff99cc);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transition: width 0.3s ease;
+    }
+    
+    .memory-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+    
+    .memory {
+      width: 300px;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .memory:hover {
+      transform: translateY(-5px);
+    }
+    
+    .memory-date {
+      font-weight: bold;
+      color: #d63384;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      border-bottom: 2px dashed #ffb3d9;
+      padding-bottom: 5px;
+    }
+    
+    .countdown {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #d63384;
+      margin: 30px 0;
+      padding: 20px;
+      background: #fff6fa;
+      border-radius: 15px;
+      display: inline-block;
+    }
+    
+    .kiss-btn {
+      background: #ff4d94;
+      padding: 18px 35px;
+      font-size: 1.3rem;
+      border-radius: 50px;
+      margin: 30px 0;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+    
+    .secret-message {
+      display: none;
+      margin: 30px auto;
+      padding: 25px;
+      background: #fff0f7;
+      border-radius: 15px;
+      border-left: 5px solid #ff4d94;
+      max-width: 600px;
+      font-size: 1.2rem;
+    }
+    
+    .navigation {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 50px;
+      z-index: 100;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      backdrop-filter: blur(5px);
+    }
+    
+    .nav-btn {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ffb3d9;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-btn.active {
+      background: #ff4d94;
+      transform: scale(1.4);
+    }
+    
+    footer {
+      padding: 40px;
+      background: linear-gradient(to right, #ff69b4, #d63384);
+      color: white;
+      margin-top: 80px;
+      border-radius: 20px 20px 0 0;
+    }
+    
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      margin-top: 20px;
+    }
+    
+    .photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+    }
+    
+    .photo-placeholder {
+      width: 180px;
+      height: 180px;
+      background: #ffcce6;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .photo-placeholder:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .love-meter {
+      width: 80%;
+      max-width: 500px;
+      height: 40px;
+      background: #ffe6f2;
+      border-radius: 50px;
+      margin: 30px auto;
+      overflow: hidden;
+      position: relative;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .love-fill {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to right, #ff4d94, #ff99cc);
+      border-radius: 50px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 2s ease;
+    }
+    
+    .love-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      font-size: 1.2rem;
+    }
+    
+    .typewriter {
+      overflow: hidden;
+      border-right: 0.15em solid #ff4d94;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+      display: inline-block;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #ff4d94 }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    @media (max-width: 768px) {
+      .header-title {
+        font-size: 2.5rem;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      .love-letter {
+        padding: 25px;
+      }
+      
+      .gift-box {
+        font-size: 80px;
+      }
+      
+      .reason-card {
+        width: 100%;
+        max-width: 350px;
+      }
+      
+      .navigation {
+        bottom: 20px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar"></div>
+  <div class="floating-hearts"></div>
+
+  <header>
+    <h1 class="header-title">For My Dearest Raihana 💖</h1>
+    <p class="typewriter">Every day with you is a blessing</p>
+  </header>
+
+  <div class="container">
+    <div class="navigation">
+      <div class="nav-btn active" data-section="0"></div>
+      <div class="nav-btn" data-section="1"></div>
+      <div class="nav-btn" data-section="2"></div>
+      <div class="nav-btn" data-section="3"></div>
+      <div class="nav-btn" data-section="4"></div>
+      <div class="nav-btn" data-section="5"></div>
+      <div class="nav-btn" data-section="6"></div>
+    </div>
+
+    <div class="section" id="section0">
+      <h1>💌 My Heartfelt Love Letter</h1>
+      <div class="love-letter">
+        <p>My dearest Raihana,</p>
+        
+        <p>From the moment you entered my life, everything changed. The colors became brighter, the air sweeter, and every moment more meaningful. I find myself constantly thinking about your beautiful smile, your kind heart, and the way you make me feel complete.</p>
+        
+        <p>I remember the first time I saw you - it was as if time stood still. Your presence commanded the room, yet you carried yourself with such grace and humility. I knew in that moment that you were someone special, someone I wanted to know more deeply.</p>
+        
+        <p>As we've grown closer, my admiration for you has only deepened. Your strength in facing challenges inspires me. Your compassion for others humbles me. Your intelligence and wit constantly surprise me. And your capacity for love gives me hope for our future together.</p>
+        
+        <p>I love the little things about you - the way your eyes light up when you talk about something you're passionate about, the sound of your laughter that I can pick out in a crowded room, the way you bite your lip when you're concentrating, and how you always know exactly what to say to make me feel better.</p>
+        
+        <p>You've shown me what true love means - it's in the everyday moments, the quiet understanding, the supportive gestures, and the shared dreams. With you, I've found not just a partner but my best friend, my confidant, and my greatest supporter.</p>
+        
+        <p>I promise to always cherish you, to support your dreams as if they were my own, to stand by you through life's challenges, and to never take for granted the incredible gift that is your love.</p>
+        
+        <p>My love for you grows stronger with each passing day. It's in the morning when I wake up thinking of you, throughout the day as I wonder what you're doing, and at night when I fall asleep with you on my mind.</p>
+        
+        <p>I dream of our future together - building a life filled with love, laughter, and adventure. I imagine growing old with you, creating countless memories, and facing whatever comes our way hand in hand.</p>
+        
+        <p>Thank you for being exactly who you are. Thank you for seeing something special in me. Thank you for every moment, every memory, and every tomorrow we will share.</p>
+        
+        <p>You are my everything, Raihana. My heart, my love, my today, and all my tomorrows.</p>
+        
+        <p>Forever yours,</p>
+        <p>With all my love ❤️</p>
+      </div>
+    </div>
+
+    <div class="section" id="section1">
+      <h1>🎁 Special Gift For You</h1>
+      <div onclick="showGift()" class="gift-box">🎁</div>
+      <div id="gift-message" class="gift-message">Raihana, you are my most precious gift. I'd unwrap a thousand lifetimes just to find you again. 💖</div>
+      
+      <div class="love-meter">
+        <div class="love-fill" id="loveFill"></div>
+        <div class="love-text" id="loveText">My Love for You: 100%</div>
+      </div>
+      
+      <button class="btn kiss-btn" onclick="sendKiss()">💋 Send a Virtual Kiss</button>
+      <div id="kiss-message" class="secret-message"></div>
+    </div>
+
+    <div class="section" id="section2">
+      <h1>💖 Reasons I Love You</h1>
+      <button class="btn" onclick="showNextReason()">Tell Me Another Reason</button>
+      
+      <div class="reasons-container">
+        <div class="reason-card">
+          <div class="reason-icon">😊</div>
+          <div class="reason-text">Your smile brightens even my darkest days</div>
+        </div>
+        
+        <div class="reason-card">
+          <div class="reason-icon">💪</div>
+          <div class="reason-text">Your strength inspires me to be better</div>
+        </div>
+        
+        <div class="reason-card">
+          <div class="reason-icon">🎯</div>
+          <div class="reason-text">You understand me without words</div>
+        </div>
+        
+        <div class="reason-card">
+          <div class="reason-icon">✨</div>
+          <div class="reason-text">You make ordinary moments magical</div>
+        </div>
+        
+        <div class="reason-card">
+          <div class="reason-icon">🤗</div>
+          <div class="reason-text">Your compassion for others is incredible</div>
+        </div>
+        
+        <div class="reason-card">
+          <div class="reason-icon">🌹</div>
+          <div class="reason-text">You're both strong and vulnerable</div>
+        </div>
+        
+        <div class="reason-card">
+          <div class="reason-icon">💭</div>
+          <div class="reason-text">Your intelligence constantly surprises me</div>
+        </div>
+        
+        <div class="reason-card">
+          <div class="reason-icon">❤️</div>
+          <div class="reason-text">You fit perfectly in my arms and heart</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="section3">
+      <h1>📸 Our Memories Together</h1>
+      <p>Even without photos, every moment with you is etched in my heart</p>
+      
+      <div class="photo-gallery">
+        <div class="photo-placeholder" onclick="showMemory(0)">📷</div>
+        <div class="photo-placeholder" onclick="showMemory(1)">❤️</div>
+        <div class="photo-placeholder" onclick="showMemory(2)">🌹</div>
+        <div class="photo-placeholder" onclick="showMemory(3)">✨</div>
+        <div class="photo-placeholder" onclick="showMemory(4)">🌙</div>
+        <div class="photo-placeholder" onclick="showMemory(5)">🌟</div>
+      </div>
+      
+      <div class="memory-container">
+        <div class="memory">
+          <div class="memory-date">The First Time We Met</div>
+          <p>I still remember the first time I saw you. Your smile captured my heart instantly, and I knew you were someone special. The way you talked and carried yourself left me mesmerized.</p>
+        </div>
+        
+        <div class="memory">
+          <div class="memory-date">Our First Date</div>
+          <p>That evening was perfect. The way the light caught your eyes, your laughter filling the space between us - I knew I was falling for you with every passing moment.</p>
+        </div>
+        
+        <div class="memory">
+          <div class="memory-date">When You First Held My Hand</div>
+          <p>Your hand fit perfectly in mine. That simple touch sent electricity through my whole body. I didn't want to ever let go.</p>
+        </div>
+        
+        <div class="memory">
+          <div class="memory-date">Our First Kiss</div>
+          <p>That magical moment when our lips met for the first time. Time stood still, and the world faded away. It was everything I had dreamed of and more.</p>
+        </div>
+        
+        <div class="memory">
+          <div class="memory-date">That Rainy Day Together</div>
+          <p>Remember when we got caught in the rain? We laughed so hard as we ran for cover. Being close to you, feeling your warmth - I didn't mind the rain at all.</p>
+        </div>
+        
+        <div class="memory">
+          <div class="memory-date">Stargazing Night</div>
+          <p>Lying next to you under the stars, talking about everything and nothing. Your head on my shoulder, my arm around you - that was pure happiness.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="section4">
+      <h1>💑 Romantic Messages</h1>
+      
+      <div class="love-letter">
+        <p>My darling Raihana,</p>
+        
+        <p>I find myself thinking about you at the most random moments throughout the day. It might be when I'm having my morning coffee, or during a busy meeting, or just watching the sunset. You've become a part of my every thought, my every dream.</p>
+        
+        <p>I love how you challenge me to be a better person. With you, I feel motivated to pursue my goals, to grow, to learn, and to become the best version of myself. You believe in me even when I struggle to believe in myself.</p>
+        
+        <p>Your touch is like electricity to my soul. The way your hand feels in mine, the way your head fits perfectly on my shoulder, the way your kisses leave me breathless - these are the moments I live for.</p>
+        
+        <p>I admire your strength and resilience. Life has thrown challenges your way, but you've faced them with grace and determination. Your ability to find joy even in difficult times inspires me daily.</p>
+        
+        <p>You've shown me what true partnership means. It's not about perfection, but about navigating life's ups and downs together. It's about supporting each other's dreams, comforting each other's sorrows, and celebrating each other's joys.</p>
+        
+        <p>I promise to always be honest with you, to communicate even when it's difficult, to listen with an open heart, and to never take our love for granted. I will work every day to be deserving of your love.</p>
+        
+        <p>You are the most beautiful woman I've ever known, both inside and out. Your physical beauty takes my breath away, but it's the beauty of your soul that has captured my heart completely.</p>
+        
+        <p>I look forward to building a future with you - a home filled with love and laughter, adventures to far-off places, quiet evenings curled up together, and a lifetime of shared memories.</p>
+        
+        <p>No matter what challenges life may bring, I will always choose you. I will choose us. I will work through difficulties, celebrate triumphs, and cherish every ordinary moment in between.</p>
+        
+        <p>You are my greatest love story, Raihana. Thank you for being you, and thank you for choosing me.</p>
+        
+        <p>With all my love, now and always.</p>
+      </div>
+    </div>
+
+    <div class="section" id="section5">
+      <h1>🌙 Good Night / ☀️ Good Morning</h1>
+      <div class="greeting" id="greeting"></div>
+      
+      <div class="countdown" id="countdown"></div>
+      
+      <div class="secret-message" id="midnight-message">
+        <p>It's past midnight, Raihana... While the world sleeps, my thoughts are filled with you. I wish I could whisper how much I love you as you drift to sleep. 💖</p>
+      </div>
+    </div>
+
+    <div class="section" id="section6">
+      <h1>🎶 Our Song</h1>
+      <p>Click play and let's enjoy our melody together</p>
+      <button class="btn" onclick="toggleMusic()">🔊 Play Our Song</button>
+      
+      <div style="margin-top: 40px;">
+        <h2>Future Dreams</h2>
+        <div class="love-letter">
+          <p>Raihana, I dream of a future with you...</p>
+          
+          <p>I imagine waking up beside you every morning, your face the first thing I see. I picture us making breakfast together, dancing in the kitchen to our favorite songs, and starting each day with love and laughter.</p>
+          
+          <p>I dream of building a home with you - not just a house, but a sanctuary filled with warmth, understanding, and unconditional love. A place where we can be completely ourselves, where we can grow together and support each other's dreams.</p>
+          
+          <p>I look forward to our adventures - traveling to places we've always wanted to see, trying new foods, getting lost in unfamiliar cities, and creating memories that will last a lifetime.</p>
+          
+          <p>I imagine quiet evenings curled up together, talking about our days, sharing our thoughts and fears, and knowing that no matter what happens outside, we have each other.</p>
+          
+          <p>I dream of growing old with you - watching our hair turn gray together, laughing about the silly moments from our youth, and still feeling butterflies when you hold my hand.</p>
+          
+          <p>I want to be there for all your triumphs and challenges. I want to celebrate your successes as if they were my own, and support you through difficulties with unwavering love.</p>
+          
+          <p>Most of all, I dream of a lifetime of love with you. Not a perfect life without challenges, but a real life filled with deep connection, understanding, and a love that grows stronger with each passing year.</p>
+          
+          <p>You are my future, Raihana. Every dream begins and ends with you.</p>
+        </div>
+      </div>
+    </div>
+
+    <button id="installBtn" class="btn" style="display:none; margin: 30px auto;">📲 Install This App</button>
+    <button class="btn" onclick="downloadApp()" style="margin: 30px auto;">📦 Download App</button>
+  </div>
+
+  <footer>
+    <p>Made with 💖 exclusively for Raihana</p>
+    <p class="signature">Forever Yours</p>
+  </footer>
+
+  <script>
+    // Service Worker and Hearts Animation
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('Service Worker registered!', reg))
+          .catch(err => console.log('Service Worker registration failed!', err));
+      });
+    }
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    }
+    setInterval(createHeart, 600);
+
+    // Floating hearts for background
+    function createFloatingHearts() {
+      const heartsContainer = document.querySelector('.floating-hearts');
+      for (let i = 0; i < 20; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('floating-heart');
+        heart.innerHTML = '❤️';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDelay = Math.random() * 5 + 's';
+        heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+        heartsContainer.appendChild(heart);
+      }
+    }
+
+    document.addEventListener('click', () => {
+      const music = document.getElementById('bg-music');
+      if (music && music.muted) {
+        music.muted = false;
+        music.play();
+      }
+    }, { once: true });
+
+    // Personalized functions
+    function showGift() {
+      document.getElementById('gift-message').style.display = 'block';
+      document.getElementById('loveFill').style.transform = 'scaleX(1)';
+      
+      // Animate love meter text
+      const loveText = document.getElementById('loveText');
+      loveText.innerHTML = "My Love for Raihana: 100%";
+      
+      // Create floating hearts animation
+      for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+          const heart = document.createElement('div');
+          heart.innerHTML = '❤️';
+          heart.style.position = 'fixed';
+          heart.style.bottom = '50%';
+          heart.style.left = '50%';
+          heart.style.fontSize = '30px';
+          heart.style.zIndex = '1000';
+          heart.style.transform = 'translate(-50%, -50%)';
+          heart.style.animation = 'floatUp 3s ease-in-out forwards';
+          document.body.appendChild(heart);
+          
+          setTimeout(() => {
+            document.body.removeChild(heart);
+          }, 3000);
+        }, i * 150);
+      }
+    }
+
+    let currentReason = 0;
+    const reasonCards = document.querySelectorAll('.reason-card');
+    
+    function showNextReason() {
+      if (currentReason < reasonCards.length) {
+        reasonCards[currentReason].classList.add('fade-in');
+        reasonCards[currentReason].classList.add('visible');
+        currentReason++;
+      } else {
+        alert("That's all for now, my beautiful Raihana, but I have infinite reasons inside my heart.");
+      }
+    }
+
+    function setGreeting() {
+      const hour = new Date().getHours();
+      const greeting = document.getElementById('greeting');
+      if (hour < 12) {
+        greeting.innerText = 'Good morning, Raihana. I hope your day is as lovely as your soul.';
+      } else if (hour < 18) {
+        greeting.innerText = 'Good afternoon, my sunshine Raihana. I\'m thinking of you.';
+      } else {
+        greeting.innerText = 'Good night, Raihana. May your dreams be wrapped in my arms.';
+      }
+      
+      // Show midnight message if it's late
+      if (hour > 22 || hour < 5) {
+        document.getElementById('midnight-message').style.display = 'block';
+      }
+    }
+
+    function updateCountdown() {
+      // Set your anniversary or next special date
+      const anniversary = new Date('2024-12-25'); // Change this to your special date
+      const now = new Date();
+      const diff = anniversary - now;
+      
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        
+        document.getElementById('countdown').innerHTML = 
+          `Countdown to our next special day:<br>${days} days, ${hours} hours, ${minutes} minutes`;
+      }
+    }
+
+    function showMemory(index) {
+      const memories = document.querySelectorAll('.memory');
+      // Simple memory display - in a real app, you would have more sophisticated memory viewing
+      alert(memories[index].querySelector('.memory-date').textContent + "\n\n" + 
+            memories[index].querySelector('p').textContent);
+    }
+
+    function sendKiss() {
+      const messages = [
+        "💋 Mwah! A kiss from me to you, Raihana!",
+        "💋 Sending kisses your way, my love!",
+        "💋 Virtual kiss delivered to your beautiful lips!",
+        "💋 If only I could really kiss you right now...",
+        "💋 My lips are forever yours, Raihana!"
+      ];
+      
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      const kissMessage = document.getElementById('kiss-message');
+      kissMessage.innerHTML = randomMessage;
+      kissMessage.style.display = 'block';
+      
+      // Create floating kiss animation
+      const kiss = document.createElement('div');
+      kiss.innerHTML = '💋';
+      kiss.style.position = 'fixed';
+      kiss.style.bottom = '20px';
+      kiss.style.right = '20px';
+      kiss.style.fontSize = '30px';
+      kiss.style.zIndex = '1000';
+      kiss.style.animation = 'floatUp 3s ease-in-out forwards';
+      document.body.appendChild(kiss);
+      
+      setTimeout(() => {
+        document.body.removeChild(kiss);
+      }, 3000);
+    }
+
+    function toggleMusic() {
+      alert("In a real application, this would play your special song. For now, imagine our song playing in the background. 🎵");
+    }
+
+    // Navigation
+    function setupNavigation() {
+      const sections = document.querySelectorAll('.section');
+      const navButtons = document.querySelectorAll('.nav-btn');
+      
+      navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const sectionIndex = button.getAttribute('data-section');
+          
+          // Update active button
+          navButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          
+          // Scroll to section
+          sections[sectionIndex].scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+      
+      // Scroll progress bar
+      window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercentage = (scrollTop / scrollHeight) * 100;
+        
+        document.querySelector('.progress-bar').style.width = scrollPercentage + '%';
+        
+        // Fade in elements as they come into view
+        document.querySelectorAll('.fade-in').forEach(element => {
+          const position = element.getBoundingClientRect();
+          if (position.top < window.innerHeight * 0.8) {
+            element.classList.add('visible');
+          }
+        });
+      });
+    }
+
+    // Initialize everything when page loads
+    window.onload = function() {
+      setGreeting();
+      updateCountdown();
+      setInterval(updateCountdown, 60000); // Update countdown every minute
+      createFloatingHearts();
+      setupNavigation();
+      
+      // Fade in elements initially in view
+      setTimeout(() => {
+        document.querySelectorAll('.fade-in').forEach(element => {
+          const position = element.getBoundingClientRect();
+          if (position.top < window.innerHeight * 0.8) {
+            element.classList.add('visible');
+          }
+        });
+      }, 500);
+    };
+
+    // PWA Installation
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = 'inline-block';
+    });
+
+    installBtn.addEventListener('click', () => {
+      installBtn.style.display = 'none';
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(choiceResult => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('App installed');
+          } else {
+            console.log('App dismissed');
+          }
+          deferredPrompt = null;
+        });
+      }
+    });
+
+    function downloadApp() {
+      alert("In a real application, this would download the app. For now, imagine this beautiful love letter is always with you. 💖");
+    }
+  </script>
+</body>
+</html>
